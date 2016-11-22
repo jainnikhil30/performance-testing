@@ -22,14 +22,14 @@
       - large_output
       - all
 
-  - name: Download artifacts from artifactory
-    get_url:
-      url: https://artifactory.ing.net/artifactory/releases_generic_public_it4it/ansible_tower_performance_test/binary_repo.bin
-      dest: /tmp/binary_repo.bin
-      validate_certs: false
-    tags:
-      - download
-      - all
+  #- name: Download artifacts from artifactory
+  #  get_url:
+  #    url: https://artifactory.ing.net/artifactory/releases_generic_public_it4it/ansible_tower_performance_test/binary_repo.bin
+  #    dest: /tmp/binary_repo.bin
+  #    validate_certs: false
+  #  tags:
+  #    - download
+  #    - all
 
   - name: Do nothing sequence - 1
     shell: sleep 20
