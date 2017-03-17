@@ -1,0 +1,6 @@
+---
+ - hosts: localhost
+   tasks:
+     - shell: cat /tmp/large_file.txt
+       register: test
+     - debug: var=test.stdout
