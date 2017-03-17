@@ -1,6 +1,6 @@
 ---
  - hosts: localhost
    tasks:
-     - shell: cat /tmp/large_file.txt
+     - shell: cat repo_mimic.txt
        register: test
      - debug: var=test.stdout
