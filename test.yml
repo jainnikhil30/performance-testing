@@ -1,6 +1,9 @@
 ---
  - hosts: all
    tasks:
-     - shell: cat repo_mimic.txt
+     - copy:
+         src: repo_mimic.txt
+         dest: /tmp/repo_mimic.txt
+     - shell: cat /tmp/repo_mimic.txt
        register: test
      - debug: var=test.stdout
